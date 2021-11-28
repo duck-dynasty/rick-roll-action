@@ -9,7 +9,7 @@ on:
   issues:
     types:
     - opened
-  pull_request:
+  pull_request_target:
     types:
     - opened
 
@@ -17,7 +17,7 @@ jobs:
   roll:
     runs-on: ubuntu-latest
     steps:
-    - uses: twentylemon/rick-roll-action@v1
+    - uses: duck-dynasty/rick-roll-action@v1
       with:
         chance: 5  # a 5% chance of including the gif
 ```
