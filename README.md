@@ -2,6 +2,8 @@
 A useless action that will post a gif of Rick Astley's _Never Gonna Give You Up_ to issues or pull requests.
 
 ## Example Usage
+The action is set up to run on pull requests and issues created in this repository, check out the [workflow](.github/workflows/rick-roll.yml). Feel free to open an issue as a demo.
+
 ```yml
 on:
   issues:
