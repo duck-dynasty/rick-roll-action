@@ -23,5 +23,5 @@ runs:
             issue_number: context.issue.number,
             owner: context.repo.owner,
             repo: context.repo.repo,
-            body: "![rick](https://user-images.githubusercontent.com/5175174/143780490-a2035c5d-e6de-4aa3-99d8-300e98ebd6af.gif)"
+            body: "![rick](https://user-images.githubusercontent.com/5175174/143781889-dec45cbf-baab-4d33-a9ce-91abc0390875.gif)"
           })
