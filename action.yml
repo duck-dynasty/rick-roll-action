@@ -13,12 +13,17 @@ runs:
     - name: Flip Coin
       id: chance
       shell: bash
-      run: echo "::set-output name=value::$(( (RANDOM % 100) + 1 ))"
+      run: |
+        if [ $((RANDOM % 100)) -lt ${{ inputs.chance }} ]; then
+          echo "::set-output name=value::doit"
+        else
+          echo "::set-output name=value::nah"
+        fi
     - name: Display Flip Result
       shell: bash
       run: echo ${{ steps.chance.outputs.value }}
     - name: Do Something
-      if: ${{ steps.chance.outputs.value }} <= ${{ inputs.chance }}
+      if: steps.chance.outputs.value == "doit"
       uses: actions/github-script@v5
       with:
         script: |
