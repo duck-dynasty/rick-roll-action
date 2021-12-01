@@ -15,9 +15,9 @@ runs:
       shell: bash
       run: |
         if [ $((RANDOM % 100)) -lt ${{ inputs.chance }} ]; then
-          echo "::set-output name=value:doit"
+          echo "::set-output name=value::doit"
         else
-          echo "::set-output name=value:nah"
+          echo "::set-output name=value::nah"
         fi
     - name: Do Something
       if: ${{ steps.chance.outputs.value }} == "doit"
