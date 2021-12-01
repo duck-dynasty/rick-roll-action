@@ -17,7 +17,7 @@ jobs:
   roll:
     runs-on: ubuntu-latest
     steps:
-    - uses: duck-dynasty/rick-roll-action@latest
+    - uses: duck-dynasty/rick-roll-action@main
       with:
         chance: 5  # a 5% chance of including the gif
 ```
