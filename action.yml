@@ -14,6 +14,9 @@ runs:
       id: chance
       shell: bash
       run: echo "::set-output name=value::$(( (RANDOM % 100) + 1 ))"
+    - name: Display Flip Result
+      shell: bash
+      run: echo ${{ steps.chance.outputs.value }}
     - name: Do Something
       if: ${{ steps.chance.outputs.value }} <= ${{ inputs.chance }}
       uses: actions/github-script@v5
