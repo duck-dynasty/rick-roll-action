@@ -20,7 +20,7 @@ runs:
           echo "::set-output name=value::nah"
         fi
     - name: Do Something
-      if: ${{ steps.chance.outputs.value }} == "doit"
+      if: steps.chance.outputs.value == "doit"
       uses: actions/github-script@v5
       with:
         script: |
