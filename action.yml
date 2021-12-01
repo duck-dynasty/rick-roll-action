@@ -23,7 +23,7 @@ runs:
       shell: bash
       run: echo ${{ steps.chance.outputs.value }}
     - name: Do Something
-      if: steps.chance.outputs.value == "doit"
+      if: steps.chance.outputs.value == 'doit'
       uses: actions/github-script@v5
       with:
         script: |
